@@ -12,6 +12,7 @@ body {
   align-items: center;
   font-size: 75px;
   perspective: 10em;
+  perspective-origin: top;
   perspective-origin: 50% calc(50% - 2em);
 }
 
@@ -31,34 +32,50 @@ body {
 }
 
 .cube {
-  opacity: 0.7;
+  position: absolute;
   width: 2em;
   height: 2em;
-  position: absolute;
   top: -1em;
   left: -1em;
+  transform-style: preserve-3d;
 }
 
-.cube .left,
-.cube .right,
-.cube .front,
-.cube .back {
+.front,
+.back,
+.left,
+.right,
+.top,
+.bottom {
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0.9;
+  border: 1px solid #000;
   background-color: var(--boxColor);
 }
-.cube .front {
+
+.front {
   transform: translateZ(1em);
 }
-.cube .right {
+
+.back {
+  transform: translateZ(-1em);
+}
+
+.left {
   transform: rotateY(90deg) translateZ(1em);
 }
-.cube .back {
-  transform: rotateY(180deg) translateZ(1em);
+
+.right {
+  transform: rotateY(-90deg) translateZ(1em);
 }
-.cube .left {
-  transform: rotateY(270deg) translateZ(1em);
+
+.top {
+  transform: rotateX(90deg) translateZ(1em);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(1em);
 }
 
 .floor {
