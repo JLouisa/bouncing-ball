@@ -1,17 +1,37 @@
-.floor {
-  background-color: grey;
-  width: 500px;
-  height: 500px;
+:root {
+  --boxColor: darkgreen;
+  --ballColor: crimson;
+  --floorColor: grey;
+}
+
+body {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.scene {
+  position: relative;
+}
+
+.ball {
+  background-color: var(--ballColor);
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
 }
 
 .cube {
-  background-color: darkgreen;
-  width: 250px;
-  height: 250px;
+  background-color: var(--boxColor);
+  width: 3em;
+  height: 3em;
 }
-.ball {
-  background-color: skyblue;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+
+.floor {
+  background-color: var(--floorColor);
+  width: 500px;
+  height: 500px;
 }
