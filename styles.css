@@ -49,6 +49,7 @@ body {
   }
   50% {
     bottom: 3em;
+    animation-timing-function: ease-in;
   }
 }
 
