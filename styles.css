@@ -40,12 +40,12 @@ body {
   transform-style: preserve-3d;
 }
 
+/* .top, */
+/* .bottom  */
 .front,
 .back,
 .left,
-.right,
-.top,
-.bottom {
+.right {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -71,12 +71,16 @@ body {
 }
 
 .top {
+  position: absolute;
+  width: 2em;
+  height: 2em;
   transform: rotateX(90deg) translateZ(1em);
+  background-color: var(--boxColor);
 }
 
-.bottom {
+/* .bottom {
   transform: rotateX(-90deg) translateZ(1em);
-}
+} */
 
 .floor {
   position: absolute;
