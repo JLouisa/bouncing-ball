@@ -3,6 +3,7 @@
   --ballColor: crimson;
   --floorColor: grey;
   --rotateSpeed: 30s;
+  --bounceSpeed: 2s;
 }
 
 body {
@@ -38,7 +39,17 @@ body {
   bottom: 1em;
   left: -0.5em;
   background-image: radial-gradient(circle at top, rgb(248, 125, 125), #000);
-  animation: sceneRotate var(--rotateSpeed) infinite linear reverse;
+  animation: ballbounce var(--bounceSpeed) infinite ease-out, sceneRotate var(--rotateSpeed) infinite linear reverse;
+}
+
+@keyframes ballbounce {
+  0%,
+  100% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 3em;
+  }
 }
 
 .ballShadow {
