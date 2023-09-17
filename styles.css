@@ -1,6 +1,6 @@
 :root {
-  --boxColor: darkgreen;
-  --ballColor: crimson;
+  --boxColor: rgb(250, 166, 70);
+  --ballColor: rgb(66, 208, 59);
   --floorColor: grey;
   --rotateSpeed: 30s;
   --bounceSpeed: 1.5s;
@@ -39,7 +39,7 @@ body {
   position: absolute;
   bottom: 1em;
   left: -0.5em;
-  background-image: radial-gradient(circle at top, rgb(248, 125, 125), #000);
+  background-image: radial-gradient(circle at top, var(--ballColor), #000);
   animation: ballbounce var(--bounceSpeed) infinite ease-out, sceneRotate var(--rotateSpeed) infinite linear reverse;
 }
 
